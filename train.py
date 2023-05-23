@@ -1,5 +1,5 @@
 import argparse
-import logging
+# import logging
 import os
 import random
 import sys
@@ -12,15 +12,11 @@ from pathlib import Path
 from torch import optim
 from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
-
 # import wandb
 from evaluate import evaluate
 from unet import UNet
 from utils.data_loading import BasicDataset, CarvanaDataset
 from utils.dice_score import dice_loss
-
-logger = logging.getLogger() ##
-logger.disabled = True ## this is to make the logger shut up
 
 def train_model(
         dir_img,
@@ -62,17 +58,17 @@ def train_model(
     #          val_percent=val_percent, save_checkpoint=save_checkpoint, img_scale=img_scale, amp=amp)
     # )
 
-    logging.info(f'''Starting training:
-        Epochs:          {epochs}
-        Batch size:      {batch_size}
-        Learning rate:   {learning_rate}
-        Training size:   {n_train}
-        Validation size: {n_val}
-        Checkpoints:     {save_checkpoint}
-        Device:          {device.type}
-        Images scaling:  {img_scale}
-        Mixed Precision: {amp}
-    ''')
+    # logging.info(f'''Starting training:
+    #     Epochs:          {epochs}
+    #     Batch size:      {batch_size}
+    #     Learning rate:   {learning_rate}
+    #     Training size:   {n_train}
+    #     Validation size: {n_val}
+    #     Checkpoints:     {save_checkpoint}
+    #     Device:          {device.type}
+    #     Images scaling:  {img_scale}
+    #     Mixed Precision: {amp}
+    # ''')
 
     # 4. Set up the optimizer, the loss, the learning rate scheduler and the loss scaling for AMP
     optimizer = optim.RMSprop(model.parameters(),
@@ -142,7 +138,7 @@ def train_model(
                         val_score = evaluate(model, val_loader, device, amp)
                         scheduler.step(val_score)
 
-                        logging.info('Validation Dice score: {}'.format(val_score))
+                        # logging.info('Validation Dice score: {}'.format(val_score))
                         # try:
                         #     experiment.log({
                         #         'learning rate': optimizer.param_groups[0]['lr'],
@@ -164,7 +160,7 @@ def train_model(
             state_dict = model.state_dict()
             state_dict['mask_values'] = dataset.mask_values
             torch.save(state_dict, str(dir_checkpoint / 'checkpoint_epoch{}.pth'.format(epoch)))
-            logging.info(f'Checkpoint {epoch} saved!')
+            # logging.info(f'Checkpoint {epoch} saved!')
 
 
 def get_args():
@@ -194,9 +190,9 @@ def train(dir_img, dir_mask, dir_checkpoint,
           bilinear = False,
           classes = 2):
 
-    logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+    # logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    logging.info(f'Using device {device}')
+    # logging.info(f'Using device {device}')
 
     # Change here to adapt to your data
     # n_channels=3 for RGB images
@@ -204,16 +200,16 @@ def train(dir_img, dir_mask, dir_checkpoint,
     model = UNet(n_channels=3, n_classes=classes, bilinear=bilinear)
     model = model.to(memory_format=torch.channels_last)
 
-    logging.info(f'Network:\n'
-                 f'\t{model.n_channels} input channels\n'
-                 f'\t{model.n_classes} output channels (classes)\n'
-                 f'\t{"Bilinear" if model.bilinear else "Transposed conv"} upscaling')
+    # logging.info(f'Network:\n'
+    #              f'\t{model.n_channels} input channels\n'
+    #              f'\t{model.n_classes} output channels (classes)\n'
+    #              f'\t{"Bilinear" if model.bilinear else "Transposed conv"} upscaling')
 
     if load:
         state_dict = torch.load(load, map_location=device)
         del state_dict['mask_values']
         model.load_state_dict(state_dict)
-        logging.info(f'Model loaded from {load}')
+        # logging.info(f'Model loaded from {load}')
 
     model.to(device=device)
     try:
@@ -231,9 +227,9 @@ def train(dir_img, dir_mask, dir_checkpoint,
             amp=amp
         )
     except torch.cuda.OutOfMemoryError:
-        logging.error('Detected OutOfMemoryError! '
-                      'Enabling checkpointing to reduce memory usage, but this slows down training. '
-                      'Consider enabling AMP (--amp) for fast and memory efficient training')
+        # logging.error('Detected OutOfMemoryError! '
+        #               'Enabling checkpointing to reduce memory usage, but this slows down training. '
+        #               'Consider enabling AMP (--amp) for fast and memory efficient training')
         torch.cuda.empty_cache()
         model.use_checkpointing()
         train_model(
