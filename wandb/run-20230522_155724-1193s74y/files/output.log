@@ -1,0 +1,18 @@
+
+
+Validation round:  83%|████████▎ | 83/100 [00:01<00:00, 106.42batch/s]
+
+Validation round:  42%|████▏     | 42/100 [00:01<00:00, 66.29batch/s]
+                                                            wandb: ERROR Failed to serialize metric: division by zero
+Validation round:   0%|          | 0/100 [00:00<?, ?batch/s]
+
+Validation round: 100%|██████████| 100/100 [00:01<00:00, 133.48batch/s]
+
+Validation round:   0%|          | 0/100 [00:00<?, ?batch/s]
+
+Validation round:  31%|███       | 31/100 [00:00<00:01, 47.21batch/s]
+
+
+
+  0%|          | 0/2 [00:00<?, ?it/s]3, 132.54it/s]
+> STEP 3 - 	training, prediction and IoU

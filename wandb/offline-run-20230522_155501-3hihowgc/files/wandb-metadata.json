@@ -1,0 +1,82 @@
+{
+    "os": "Linux-5.19.0-41-generic-x86_64-with-glibc2.35",
+    "python": "3.10.10",
+    "heartbeatAt": "2023-05-22T13:55:01.960099",
+    "startedAt": "2023-05-22T13:55:01.889739",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "host": "marco-Precision-5820-Tower",
+    "username": "marco",
+    "executable": "/home/marco/mambaforge/envs/deeplearning/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 4211.8769999999995,
+        "min": 1200.0,
+        "max": 4500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3999.987,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4179.176,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4268.19,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4399.996,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4000.012,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4179.457,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4268.204,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4399.994,
+            "min": 1200.0,
+            "max": 4500.0
+        }
+    ],
+    "disk": {
+        "total": 467.8895797729492,
+        "used": 319.83697509765625
+    },
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080 Ti",
+            "memory_total": 12884901888
+        },
+        {
+            "name": "Quadro P400",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 15.310787200927734
+    }
+}

@@ -1,0 +1,217 @@
+INFO: Starting training:
+        Epochs:          1
+        Batch size:      1
+        Learning rate:   1e-05
+        Training size:   900
+        Validation size: 100
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: True
+Epoch 1/1:  20%|██        | 180/900 [00:06<00:19, 37.51img/s, loss (batch)=0.00175]
+
+
+
+Epoch 1/1:  40%|████      | 360/900 [00:14<00:15, 34.59img/s, loss (batch)=0.0017]
+
+
+
+
+Epoch 1/1:  60%|██████    | 540/900 [00:23<00:10, 34.68img/s, loss (batch)=0.00552]
+
+
+Epoch 1/1:  80%|████████  | 720/900 [00:31<00:05, 34.15img/s, loss (batch)=0.000882]
+
+
+
+Epoch 1/1: 100%|██████████| 900/900 [00:39<00:00, 36.69img/s, loss (batch)=0.000376]
+INFO: Checkpoint 1 saved!
+INFO: Loading model data_toydataset/data3/MODEL3.pth
+INFO: Using device cuda
+created folder data_toydataset/data0/pred3/
+INFO: Model loaded!
+
+
+
+ 99%|█████████▉| 994/1000 [00:07<00:00, 136.87it/s]
+INFO: Loading model data_toydataset/data3/MODEL3.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 99%|█████████▉| 991/1000 [00:07<00:00, 125.32it/s]
+INFO: Loading model data_toydataset/data3/MODEL3.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+INFO: Loading model data_toydataset/data3/MODEL3.pth
+INFO: Using device cuda
+INFO: Model loaded!
+  1%|▏         | 14/1000 [00:00<00:07, 130.56it/s]
+
+
+
+
+ 99%|█████████▉| 994/1000 [00:07<00:00, 136.97it/s]
+> STEP 4 - 	creating 'graph_3d.png'
+> STEP 5 - 	Applying the BN adaptation, predicting and saving the IoU
+  0%|          | 0/16 [00:00<?, ?it/s]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data0/pred_adapted0/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL00.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+  6%|▋         | 1/16 [00:18<04:39, 18.65s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL01.pth
+INFO: Using device cuda
+INFO: Model loaded!
+  1%|▏         | 14/1000 [00:00<00:07, 136.61it/s]
+
+
+
+ 12%|█▎        | 2/16 [00:37<04:24, 18.89s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data2/pred_adapted0/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL02.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 19%|█▉        | 3/16 [00:56<04:05, 18.92s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL03.pth
+INFO: Using device cuda
+INFO: Model loaded!
+  0%|          | 0/1000 [00:00<?, ?it/s]
+
+
+
+
+ 25%|██▌       | 4/16 [01:16<03:49, 19.09s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data0/pred_adapted1/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL10.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 31%|███▏      | 5/16 [01:34<03:28, 18.99s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data1/pred_adapted1/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL11.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 38%|███▊      | 6/16 [01:55<03:15, 19.51s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data2/pred_adapted1/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL12.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 44%|████▍     | 7/16 [02:16<03:00, 20.08s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL13.pth
+INFO: Using device cuda
+INFO: Model loaded!
+  3%|▎         | 26/1000 [00:00<00:07, 124.41it/s]
+
+
+
+ 50%|█████     | 8/16 [02:35<02:38, 19.81s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data0/pred_adapted2/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL20.pth
+INFO: Using device cuda
+INFO: Model loaded!
+ 49%|████▊     | 487/1000 [00:03<00:03, 136.59it/s]
+ 75%|███████▌  | 753/1000 [00:05<00:01, 134.34it/s]
+ 99%|█████████▉| 991/1000 [00:07<00:00, 134.70it/s]
+ 56%|█████▋    | 9/16 [02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+ 56%|█████▋    | 9/16 [02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+INFO: Using device cuda02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+INFO: Using device cuda02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+created folder data_toydataset/data1/pred_adapted2/
+INFO: Using device cuda02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+INFO: Using device cuda02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+INFO: Using device cuda02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+INFO: Using device cuda02:54<02:15, 19.41s/it]INFO: Creating dataset with 1000 examples
+INFO: Unique mask values: [False, True]41s/it]INFO: Creating dataset with 1000 examples
+INFO: Unique mask values: [False, True]41s/it]INFO: Creating dataset with 1000 examples
+created folder data_toydataset/data2/pred_adapted2/
+INFO: Unique mask values: [False, True]41s/it]INFO: Creating dataset with 1000 examples
+INFO: Unique mask values: [False, True]41s/it]INFO: Creating dataset with 1000 examples
+INFO: Unique mask values: [False, True]41s/it]INFO: Creating dataset with 1000 examples
+100%|██████████| 1000/1000 [00:07<00:00, 134.05it/s]Creating dataset with 1000 examples
+100%|██████████| 1000/1000 [00:07<00:00, 134.05it/s]Creating dataset with 1000 examples
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL23.pthataset with 1000 examples
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL23.pthataset with 1000 examples
+created folder data_toydataset/data3/pred_adapted2/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL23.pthataset with 1000 examples
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL23.pthataset with 1000 examples
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL23.pthataset with 1000 examples
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL23.pthataset with 1000 examples
+INFO: Scanning mask files to determine unique valuesODEL23.pthataset with 1000 examples
+INFO: Scanning mask files to determine unique valuesODEL23.pthataset with 1000 examples
+INFO: Scanning mask files to determine unique valuesODEL23.pthataset with 1000 examples
+  6%|▋         | 65/1000 [00:00<00:07, 121.50it/s]esODEL23.pthataset with 1000 examples
+  6%|▋         | 65/1000 [00:00<00:07, 121.50it/s]esODEL23.pthataset with 1000 examples
+  6%|▋         | 65/1000 [00:00<00:07, 121.50it/s]esODEL23.pthataset with 1000 examples
+  6%|▋         | 65/1000 [00:00<00:07, 121.50it/s]esODEL23.pthataset with 1000 examples
+  6%|▋         | 65/1000 [00:00<00:07, 121.50it/s]esODEL23.pthataset with 1000 examples
+  6%|▋         | 65/1000 [00:00<00:07, 121.50it/s]esODEL23.pthataset with 1000 examples
+  6%|▋         | 65/1000 [00:00<00:07, 121.50it/s]esODEL23.pthataset with 1000 examples
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+created folder data_toydataset/data1/pred_adapted3/
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+  0%|          | 0/1000 [00:00<?, ?it/s]21.50it/s]esODEL23.pthataset with 1000 examples
+ 14%|█▍        | 138/1000 [00:01<00:06, 129.63it/s]sODEL23.pthataset with 1000 examples
+ 14%|█▍        | 138/1000 [00:01<00:06, 129.63it/s]sODEL23.pthataset with 1000 examples
+ 14%|█▍        | 138/1000 [00:01<00:06, 129.63it/s]sODEL23.pthataset with 1000 examples
+ 14%|█▍        | 138/1000 [00:01<00:06, 129.63it/s]sODEL23.pthataset with 1000 examples
+ 14%|█▍        | 138/1000 [00:01<00:06, 129.63it/s]sODEL23.pthataset with 1000 examples
+ 14%|█▍        | 138/1000 [00:01<00:06, 129.63it/s]sODEL23.pthataset with 1000 examples
+  1%|▏         | 14/1000 [00:00<00:07, 138.72it/s]]sODEL23.pthataset with 1000 examples
+  1%|▏         | 14/1000 [00:00<00:07, 138.72it/s]]sODEL23.pthataset with 1000 examples
+created folder data_toydataset/data3/pred_adapted3/
+  1%|▏         | 14/1000 [00:00<00:07, 138.72it/s]]sODEL23.pthataset with 1000 examples
+  1%|▏         | 14/1000 [00:00<00:07, 138.72it/s]]sODEL23.pthataset with 1000 examples
+  1%|▏         | 14/1000 [00:00<00:07, 138.72it/s]]sODEL23.pthataset with 1000 examples
+  1%|▏         | 14/1000 [00:00<00:07, 138.72it/s]]sODEL23.pthataset with 1000 examples
+> STEP 6 - 	creating 'graph_3d_adapted.png'

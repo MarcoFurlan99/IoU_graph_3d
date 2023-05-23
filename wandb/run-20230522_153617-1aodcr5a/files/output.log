@@ -1,0 +1,74 @@
+INFO: Starting training:
+        Epochs:          1
+        Batch size:      1
+        Learning rate:   1e-05
+        Training size:   900
+        Validation size: 100
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: True
+
+Epoch 1/1:  20%|██        | 180/900 [00:07<00:23, 30.35img/s, loss (batch)=0.584]
+
+
+
+
+Epoch 1/1:  40%|████      | 360/900 [00:17<00:19, 27.54img/s, loss (batch)=0.17]
+
+
+
+
+Epoch 1/1:  60%|██████    | 540/900 [00:27<00:13, 27.24img/s, loss (batch)=0.153]
+
+
+
+
+Epoch 1/1:  80%|████████  | 720/900 [00:37<00:09, 18.86img/s, loss (batch)=0.13]
+
+
+
+
+
+Epoch 1/1: 100%|██████████| 900/900 [00:48<00:00, 27.68img/s, loss (batch)=0.164]
+INFO: Checkpoint 1 saved!
+INFO: Loading model data_toydataset/data1/MODEL1.pth
+INFO: Using device cuda
+INFO: Model loaded!
+  6%|▌         | 55/1000 [00:00<00:07, 133.82it/s]
+
+
+
+INFO: Loading model data_toydataset/data1/MODEL1.pth
+INFO: Using device cuda
+created folder data_toydataset/data1/pred1/
+INFO: Model loaded!
+
+
+
+100%|█████████▉| 995/1000 [00:07<00:00, 128.14it/s]
+INFO: Loading model data_toydataset/data1/MODEL1.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+INFO: Loading model data_toydataset/data1/MODEL1.pth
+INFO: Using device cuda
+INFO: Model loaded!
+  3%|▎         | 30/1000 [00:00<00:06, 139.36it/s]
+
+
+
+
+INFO: Using device cuda00 [00:07<00:00, 128.31it/s]
+INFO: Network:
+	3 input channels
+	2 output channels (classes)
+	Transposed conv upscaling
+INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2

@@ -1,0 +1,98 @@
+INFO: Starting training:
+        Epochs:          1
+        Batch size:      1
+        Learning rate:   1e-05
+        Training size:   900
+        Validation size: 100
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  1.0
+        Mixed Precision: True
+
+Epoch 1/1:  20%|██        | 180/900 [00:07<00:22, 32.45img/s, loss (batch)=0.381]
+
+
+
+
+Epoch 1/1:  40%|████      | 360/900 [00:17<00:20, 26.49img/s, loss (batch)=0.239]
+
+
+
+
+Epoch 1/1:  60%|██████    | 540/900 [00:27<00:14, 24.42img/s, loss (batch)=0.244]
+
+
+
+
+Epoch 1/1:  80%|████████  | 720/900 [00:37<00:06, 27.25img/s, loss (batch)=0.238]
+
+
+
+
+Epoch 1/1: 100%|██████████| 900/900 [00:47<00:00, 27.52img/s, loss (batch)=0.405]
+
+INFO: Checkpoint 1 saved!
+created folder data_toydataset/data0/pred1/
+INFO: Loading model data_toydataset/data1/MODEL1.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+100%|██████████| 1000/1000 [00:07<00:00, 131.34it/s]
+INFO: Loading model data_toydataset/data1/MODEL1.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 92%|█████████▏| 918/1000 [00:07<00:00, 128.77it/s]
+  0%|          | 0/4 [00:00<?, ?it/s]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+> STEP 5 - 	Applying the BN adaptation, predicting and saving the IoU
+created folder data_toydataset/MODELS_adapted/
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data0/pred_adapted0/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL00.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 25%|██▌       | 1/4 [00:18<00:56, 18.91s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data1/pred_adapted0/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL01.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 50%|█████     | 2/4 [00:37<00:37, 18.84s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data0/pred_adapted1/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL10.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+ 75%|███████▌  | 3/4 [00:57<00:19, 19.12s/it]INFO: Creating dataset with 1000 examples
+INFO: Scanning mask files to determine unique values
+INFO: Unique mask values: [False, True]
+INFO: Number of unique mask values: 2
+created folder data_toydataset/data1/pred_adapted1/
+INFO: Loading model data_toydataset/MODELS_adapted/MODEL11.pth
+INFO: Using device cuda
+INFO: Model loaded!
+
+
+
+100%|█████████▉| 997/1000 [00:07<00:00, 131.65it/s]
+> STEP 6 - 	creating 'graph_3d_adapted.png'
+
