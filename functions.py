@@ -11,7 +11,8 @@ from tkVideoPlayer import TkinterVideo
 from time import time
 
 def create_directories(folder, verbose = True):
-    """Will try to create the full path 'folder'. If already existing will do nothing"""
+    """Will try to create the full path 'folder'. If already existing will do nothing.
+    'verbose'=False will disable the message."""
     try:
         makedirs(folder)
         if verbose: print(f'created folder {folder}')
@@ -150,6 +151,7 @@ def perlin_shapes_show_sample(n_imgs, parameters_list, mus_differences):
 ############
 
 def IoU(mask1, mask2, value):
+    """Computes the IoU between 'mask1' and 'mask2' over the value 'value' (True/False)"""
     im1 = Image.open(mask1)
     im2 = Image.open(mask2)
     matrix1 = np.array(im1) == value
@@ -161,6 +163,8 @@ def IoU(mask1, mask2, value):
     return intersection/union
 
 def avg_IoU(folder1, folder2, value):
+    """Computes the average IoU over the images in the two folders (images with same name are compared),
+    over the value 'value' (True/False)"""
     IoU_list = []
     for file in listdir(folder1):
         IoU_list.append(IoU(join(folder1, file),join(folder2, file), value))
@@ -170,6 +174,8 @@ from unet.unet_model import UNet
 import torch
 
 def BN_adapt(model_root, dataset, device, saving_root):
+    """Example of use: BN_adapt('MODEL.pth', 'dataset/imgs', 'cuda', 'MODEL_adapted.pth')
+    Applies BN_adaptation to 'model_root' w.r.t. the dataset 'dataset', and saves it under 'saving_root'"""
     model = UNet(n_channels=3, n_classes=2).to(device=device)
     state_dict = torch.load(model_root, map_location=device)
     del state_dict['mask_values']
@@ -191,6 +197,15 @@ from matplotlib import cm
 import numpy as np
 
 def graph_3d(d, mus_differences, filename, title, show = False, is_diff = False):
+    """
+    graphs the data contained in 'd'.
+    'mus_differences' is a list displayed in place of the ticks.
+    'filename' is the saving path (e.g. "image.png").
+    'title' is a string with the title.
+    'show' will show.
+    'is_diff'=False will set the z limits to [0,1]
+    """
+    
     n = int(len(d)**0.5) ## somewhat unnecessary but meh...
     fig = plt.figure()
     ax = fig.add_subplot(projection='3d')
@@ -246,7 +261,11 @@ def graph_3d(d, mus_differences, filename, title, show = False, is_diff = False)
 import plotly.graph_objects as go
 
 def graph_3d_plotly(d, is_diff = False, mus_differences = None):
-
+    """
+    graphs the data contained in 'd'.
+    'mus_differences' is a list displayed in place of the ticks.
+    'is_diff'=False will set the z limits to [0,1]
+    """
     n = int(len(d)**0.5)
     mus = bool(mus_differences)
     if not mus:
