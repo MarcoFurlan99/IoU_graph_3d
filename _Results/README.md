@@ -10,6 +10,6 @@ From *2)* We can see that results are not necessarily consistent upon different 
  
 \
 
-More datasets are being generated to deepen the understanding of this behaviour.
+I'm generating more datasets to deepen the understanding of this behaviour.
 
 
