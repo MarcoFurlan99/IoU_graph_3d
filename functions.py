@@ -242,3 +242,69 @@ def graph_3d(d, mus_differences, filename, title, show = False, is_diff = False)
     if show == True:
         plt.show()
 
+
+import plotly.graph_objects as go
+
+def graph_3d_plotly(d, is_diff = False, mus_differences = None):
+
+    n = int(len(d)**0.5)
+    mus = bool(mus_differences)
+    if not mus:
+        mus_differences = [str(i) for i in range(n)]
+
+    x = np.arange(0,n,1.0)
+    y = np.arange(0,n,1.0)
+    Z = np.zeros((n,n))
+    
+    X,Y = np.meshgrid(x, y)
+    for datapoint in d:
+        Z[datapoint] = d[datapoint]
+    Z = Z.T # Z needs to be transposed because of the way ax.plot_surface works
+    
+    Z_zeros = np.zeros((n,n))
+
+    d_neg = {key:d[key] for key in d if d[key] < 0}
+    x_,y_,z_ = [],[],[]
+    for key in d_neg:
+        x_.append(key[0])
+        y_.append(key[1])
+        z_.append(d_neg[key])
+
+    fig = go.Figure([
+    go.Scatter3d(
+    x = x_,
+    y = y_,
+    z = z_,
+    mode = "markers",
+    marker=dict(size=3,line=dict(width=0), color = "red"),
+    ),
+    go.Surface(
+    x = x,
+    y = y,
+    z = Z_zeros,
+    opacity=0.5,
+    colorscale= "Blues"
+    ),
+    go.Surface(
+    contours = {
+        "x": {"show": True, "start": 0, "end": n, "size": 1, "color":"rgba(147,112,219,255)"},
+        "y": {"show": True, "start": 0, "end": n, "size": 1, "color":"rgba(147,112,219,255)"},
+    },
+    x = x,
+    y = y,
+    z = Z),
+    ]
+    )
+    
+    fig.update_layout(
+            scene = {
+                "xaxis_title": "Source mu2 - mu1" if mus else "",
+                "yaxis_title": "Target mu2 - mu1" if mus else "",
+                "zaxis_title": "IoU" if not is_diff else "IoU_diff",
+                "xaxis": {"range": [0,n-1], "tickvals": list(range(n+1)), "tickmode":"array", "ticktext" : mus_differences},
+                "yaxis": {"range": [0,n-1], "tickvals": list(range(n+1)), "tickmode":"array", "ticktext" : mus_differences},
+                "zaxis": {"range": [0,1]} if not is_diff else {},
+                'camera_eye': {"x": -2, "y": -2, "z": 2},
+                "aspectratio": {"x": 1, "y": 1, "z": 1}
+            })
+    fig.show()
