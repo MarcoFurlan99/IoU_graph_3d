@@ -1,6 +1,6 @@
 *1)* **Results_1_1** is the output of a big computation with 20 datasets (4h 9m).
 
-*2)* **Results_2_1**, **Results_2_2**, **Results_2_3** are multiple iterations of the same algorithm running.
+*2)* **Results_2_1**, **Results_2_2**, **Results_2_3** are the outputs of smaller computations with 5 datasets each (16m).
 
 _
 
