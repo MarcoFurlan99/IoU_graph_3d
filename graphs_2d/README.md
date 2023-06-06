@@ -1,8 +1,10 @@
+## informations
+
 epochs = 5 \
 classes = 2 \
 n_train = 5000 \
 n_test = 500 \
-early stopping: patience = 6, min_delta = 0 \
+early stopping: patience = 6, min_delta = 0
 
 parameters_list = [ (123, 50, 133, 50), --> 10 \
                     (121, 50, 135, 50), --> 14 \
@@ -14,11 +16,11 @@ parameters_list = [ (123, 50, 133, 50), --> 10 \
                     (65,  50, 191, 50), --> 126 \
                     (38,  50, 218, 50), --> 180 \
                     (1,   50, 255, 50), --> 254 \
-                            ] \
+                            ]
 
-saved all models trained (before BN adaptation) \
+saved all models trained (before BN adaptation)
 
-IoU computed only on 1 mask (not on background) \
+IoU computed only on 1 mask (not on background)
 
 ## Results (IoU)
 0 \
