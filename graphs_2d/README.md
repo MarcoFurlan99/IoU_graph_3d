@@ -6,7 +6,7 @@ n_train = 5000 \
 n_test = 500 \
 early stopping: patience = 6, min_delta = 0
 
-parameters_list = [
+parameters_list = [ \
 (123, 50, 133, 50), --> 10 \
 (121, 50, 135, 50), --> 14 \
 (117, 50, 139, 50), --> 22 \
