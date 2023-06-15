@@ -1,5 +1,19 @@
 ## informations
 
+The following images are the result of the "full process", that is:
+1) create 10 dataset (with parameters in parameters_list) (train + test, val included in train)
+2) save image with samples
+3) train 10 unets on the 10 datasets, make 100 predictions on the 10 test datasets, compute the IoU for each
+4) create 2d color graph with the IoU scores
+5) apply BN adaptation from each model to each test dataset (100 new adapted models created), predict on respective test set and compute IoU
+6) create 2d color graph with IoU from adapted models
+7) create 2d color graph with difference between the 2 IoUs
+[WIP: 8) compute wasserstein]
+8) backup relevant data
+9) release memory
+
+The entire process was reiterated 8 times
+
 epochs = 5 \
 classes = 2 \
 n_train = 5000 \
