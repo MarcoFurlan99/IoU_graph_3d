@@ -8,7 +8,7 @@ The following images are the result of the "full process", that is:
 5) apply BN adaptation from each model to each test dataset (100 new adapted models created), predict on respective test set and compute IoU
 6) create 2d color graph with IoU from adapted models
 7) create 2d color graph with difference between the 2 IoUs
-[WIP: 8) compute wasserstein]
+_ WIP: 8) compute wasserstein _
 8) backup relevant data
 9) release memory
 
